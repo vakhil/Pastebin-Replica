@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Duplicate version of PasteBin </title>
+    <!-- Latest compiled and minified CSS -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" th:href="@{/css/global.css}" href="../static/css/global.css" type="text/css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+    $(function () {
+            $( "#send" ).click(function() {
+                //Get text in the textAreaBox
+                var pastedNotes = document.getElementById('writenNote').value
+                //Send pastedNotes in XML Post Request
+                var httpRequest = new XMLHttpRequest();
+                //TO-DO: Stick pastedNotes in the post Request
+                httpRequest.open('POST', 'http://localhost:8080/save',true);
+                httpRequest.setRequestHeader("Content-type", "text/plain");
+                httpRequest.onreadystatechange = function() {
+                      if (this.readyState == 4 && this.status == 200) {
+                         alert(this.responseText);
+                         window.location.href = "http://localhost:8080/r/"+this.responseText;
+
+                      }
+                    };
+
+
+                httpRequest.send(pastedNotes);
+
+                // If the post request is succesful, transfer it to another page ... with thee contents
+
+            });
+        });
+
+
+
+
+
+</script>
+</head>
+<body>
+
+<div class="container-fluid bg">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">PasteBin</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li th:if="${session.tier != null}" class="nav-item">
+                    <a class="nav-link" href="http:localhost:8080/editHistory">Past Edits </a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Account
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <div th:if="${session.tier != null}" >
+                        <div th:if="${session.tier == 'FREE'}">
+                            <a class="dropdown-item" href="#">Upgrade to Premium</a>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Logout</a>
+                    </div>
+
+
+                    <div th:if="${session.tier == null}"  >
+                            <a class="btn btn-outline-dark" href="http://localhost:8080/XYZ" role="button" style="text-transform:none">
+                                <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                                Login with Google
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+            <textarea type="text" id="writenNote"  class="notes" > </textarea>
+            <button id="send" type="submit" class="btn btn-success btn-block">Submit</button>
+        </div>
+        <div class="col-md-4">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
