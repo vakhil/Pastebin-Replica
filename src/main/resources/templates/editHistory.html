@@ -70,6 +70,32 @@
 
         </div>
 
+    <span><a href="localhost:8080/editHistory"> First</a></span>
+    <span th:if="${currentPageNumber != 1 and currentPageNumber != numberOfPages}">
+        <span><a th:href="'http://localhost:8080/editHistory/' + ${currentPageNumber-1}">[[${currentPageNumber-1}]]</a></span>
+        <span><a th:href="'http://localhost:8080/editHistory/' + ${currentPageNumber}">[[${currentPageNumber}]]</a></span>
+        <span><a th:href="'http://localhost:8080/editHistory/' + ${currentPageNumber+1}">[[${currentPageNumber+1}]]</a></span>
+    </span>
+
+    <span th:if="${currentPageNumber == 1}">
+        <span><a th:href="'http://localhost:8080/editHistory/1'">1</a></span>
+        <span><a th:href="'http://localhost:8080/editHistory/2'">2</a></span>
+
+        <span>.</span>
+        <span>.</span>
+    </span>
+
+    <span th:if="${currentPageNumber == numberOfPages}">
+        <span>.</span>
+        <span>.</span>
+
+        <span><a th:href="'http://localhost:8080/editHistory/' + ${currentPageNumber-1}">[[${currentPageNumber-1}]]</a></span>
+        <span><a th:href="'http://localhost:8080/editHistory/' + ${currentPageNumber}">[[${currentPageNumber}]]</a></span>
+    </span>
+
+    <span><a th:href="'http://localhost:8080/editHistory/' + ${numberOfPages}"> Last</a></span>
+
+
 </div>
 
 

@@ -2,6 +2,8 @@ package com.designProject.Pastebin.JpaRepository;
 
 import com.designProject.Pastebin.models.PastedNotes;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.QueryHints;
 
@@ -13,5 +15,5 @@ public interface PastebinRepository extends JpaRepository<PastedNotes,String> {
     PastedNotes findByUrlAddress(String urlAddress);
    List<PastedNotes> findByAccountId(String accountId);
     @Cacheable("books")
-    List<PastedNotes> findByAccountIdOrderByTimestampDesc(String user);
+    Page<PastedNotes> findByAccountIdOrderByTimestampDesc(String user, Pageable pageable);
 }

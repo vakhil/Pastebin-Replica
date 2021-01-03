@@ -48,3 +48,114 @@ select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ fro
 #2020-12-31 04:40:00 PM | took 1ms | statement | connection 11| url jdbc:mysql://localhost:3306/pastebin
 select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId=?
 select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId='akhilvemula95@gmail.com';
+#2021-01-03 01:00:39 PM | took 1193ms | statement | connection 4| url jdbc:mysql://localhost:3306/pastebin
+select pastednote0_.urlAddress as urladdre1_1_, pastednote0_.accountId as accounti2_1_, pastednote0_.text as text3_1_, pastednote0_.tier as tier4_1_, pastednote0_.created_timestamp as created_5_1_ from notes pastednote0_ where pastednote0_.accountId=? order by pastednote0_.created_timestamp desc limit ?
+select pastednote0_.urlAddress as urladdre1_1_, pastednote0_.accountId as accounti2_1_, pastednote0_.text as text3_1_, pastednote0_.tier as tier4_1_, pastednote0_.created_timestamp as created_5_1_ from notes pastednote0_ where pastednote0_.accountId='akhilvemula95@gmail.com' order by pastednote0_.created_timestamp desc limit 10;
+#2021-01-03 01:00:39 PM | took 0ms | statement | connection 4| url jdbc:mysql://localhost:3306/pastebin
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId=?
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId='akhilvemula95@gmail.com';
+#2021-01-03 03:35:23 PM | took 64ms | statement | connection 4| url jdbc:mysql://localhost:3306/pastebin
+select pastednote0_.urlAddress as urladdre1_1_, pastednote0_.accountId as accounti2_1_, pastednote0_.text as text3_1_, pastednote0_.tier as tier4_1_, pastednote0_.created_timestamp as created_5_1_ from notes pastednote0_ where pastednote0_.accountId=? order by pastednote0_.created_timestamp desc limit ?
+select pastednote0_.urlAddress as urladdre1_1_, pastednote0_.accountId as accounti2_1_, pastednote0_.text as text3_1_, pastednote0_.tier as tier4_1_, pastednote0_.created_timestamp as created_5_1_ from notes pastednote0_ where pastednote0_.accountId='akhilvemula95@gmail.com' order by pastednote0_.created_timestamp desc limit 10;
+#2021-01-03 03:35:23 PM | took 58ms | statement | connection 4| url jdbc:mysql://localhost:3306/pastebin
+select count(pastednote0_.urlAddress) as col_0_0_ from notes pastednote0_ where pastednote0_.accountId=?
+select count(pastednote0_.urlAddress) as col_0_0_ from notes pastednote0_ where pastednote0_.accountId='akhilvemula95@gmail.com';
+#2021-01-03 03:35:23 PM | took 0ms | statement | connection 4| url jdbc:mysql://localhost:3306/pastebin
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId=?
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId='akhilvemula95@gmail.com';
+#2021-01-03 03:35:30 PM | took 43ms | statement | connection 5| url jdbc:mysql://localhost:3306/pastebin
+select pastednote0_.urlAddress as urladdre1_1_, pastednote0_.accountId as accounti2_1_, pastednote0_.text as text3_1_, pastednote0_.tier as tier4_1_, pastednote0_.created_timestamp as created_5_1_ from notes pastednote0_ where pastednote0_.accountId=? order by pastednote0_.created_timestamp desc limit ?, ?
+select pastednote0_.urlAddress as urladdre1_1_, pastednote0_.accountId as accounti2_1_, pastednote0_.text as text3_1_, pastednote0_.tier as tier4_1_, pastednote0_.created_timestamp as created_5_1_ from notes pastednote0_ where pastednote0_.accountId='akhilvemula95@gmail.com' order by pastednote0_.created_timestamp desc limit 10, 10;
+#2021-01-03 03:35:30 PM | took 32ms | statement | connection 5| url jdbc:mysql://localhost:3306/pastebin
+select count(pastednote0_.urlAddress) as col_0_0_ from notes pastednote0_ where pastednote0_.accountId=?
+select count(pastednote0_.urlAddress) as col_0_0_ from notes pastednote0_ where pastednote0_.accountId='akhilvemula95@gmail.com';
+#2021-01-03 03:35:30 PM | took 0ms | statement | connection 5| url jdbc:mysql://localhost:3306/pastebin
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId=?
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId='akhilvemula95@gmail.com';
+#2021-01-03 03:36:24 PM | took 0ms | statement | connection 6| url jdbc:mysql://localhost:3306/pastebin
+select pastednote0_.urlAddress as urladdre1_1_, pastednote0_.accountId as accounti2_1_, pastednote0_.text as text3_1_, pastednote0_.tier as tier4_1_, pastednote0_.created_timestamp as created_5_1_ from notes pastednote0_ where pastednote0_.urlAddress=?
+select pastednote0_.urlAddress as urladdre1_1_, pastednote0_.accountId as accounti2_1_, pastednote0_.text as text3_1_, pastednote0_.tier as tier4_1_, pastednote0_.created_timestamp as created_5_1_ from notes pastednote0_ where pastednote0_.urlAddress='0218OA89HU';
+#2021-01-03 03:52:04 PM | took 48ms | statement | connection 4| url jdbc:mysql://localhost:3306/pastebin
+select pastednote0_.urlAddress as urladdre1_1_, pastednote0_.accountId as accounti2_1_, pastednote0_.text as text3_1_, pastednote0_.tier as tier4_1_, pastednote0_.created_timestamp as created_5_1_ from notes pastednote0_ where pastednote0_.accountId=? order by pastednote0_.created_timestamp desc limit ?
+select pastednote0_.urlAddress as urladdre1_1_, pastednote0_.accountId as accounti2_1_, pastednote0_.text as text3_1_, pastednote0_.tier as tier4_1_, pastednote0_.created_timestamp as created_5_1_ from notes pastednote0_ where pastednote0_.accountId='akhilvemula95@gmail.com' order by pastednote0_.created_timestamp desc limit 10;
+#2021-01-03 03:52:04 PM | took 32ms | statement | connection 4| url jdbc:mysql://localhost:3306/pastebin
+select count(pastednote0_.urlAddress) as col_0_0_ from notes pastednote0_ where pastednote0_.accountId=?
+select count(pastednote0_.urlAddress) as col_0_0_ from notes pastednote0_ where pastednote0_.accountId='akhilvemula95@gmail.com';
+#2021-01-03 03:52:04 PM | took 0ms | statement | connection 4| url jdbc:mysql://localhost:3306/pastebin
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId=?
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId='akhilvemula95@gmail.com';
+#2021-01-03 03:52:11 PM | took 44ms | statement | connection 5| url jdbc:mysql://localhost:3306/pastebin
+select pastednote0_.urlAddress as urladdre1_1_, pastednote0_.accountId as accounti2_1_, pastednote0_.text as text3_1_, pastednote0_.tier as tier4_1_, pastednote0_.created_timestamp as created_5_1_ from notes pastednote0_ where pastednote0_.accountId=? order by pastednote0_.created_timestamp desc limit ?, ?
+select pastednote0_.urlAddress as urladdre1_1_, pastednote0_.accountId as accounti2_1_, pastednote0_.text as text3_1_, pastednote0_.tier as tier4_1_, pastednote0_.created_timestamp as created_5_1_ from notes pastednote0_ where pastednote0_.accountId='akhilvemula95@gmail.com' order by pastednote0_.created_timestamp desc limit 10, 10;
+#2021-01-03 03:52:11 PM | took 32ms | statement | connection 5| url jdbc:mysql://localhost:3306/pastebin
+select count(pastednote0_.urlAddress) as col_0_0_ from notes pastednote0_ where pastednote0_.accountId=?
+select count(pastednote0_.urlAddress) as col_0_0_ from notes pastednote0_ where pastednote0_.accountId='akhilvemula95@gmail.com';
+#2021-01-03 03:52:11 PM | took 0ms | statement | connection 5| url jdbc:mysql://localhost:3306/pastebin
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId=?
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId='akhilvemula95@gmail.com';
+#2021-01-03 03:52:18 PM | took 290ms | statement | connection 6| url jdbc:mysql://localhost:3306/pastebin
+select pastednote0_.urlAddress as urladdre1_1_, pastednote0_.accountId as accounti2_1_, pastednote0_.text as text3_1_, pastednote0_.tier as tier4_1_, pastednote0_.created_timestamp as created_5_1_ from notes pastednote0_ where pastednote0_.accountId=? order by pastednote0_.created_timestamp desc limit ?, ?
+select pastednote0_.urlAddress as urladdre1_1_, pastednote0_.accountId as accounti2_1_, pastednote0_.text as text3_1_, pastednote0_.tier as tier4_1_, pastednote0_.created_timestamp as created_5_1_ from notes pastednote0_ where pastednote0_.accountId='akhilvemula95@gmail.com' order by pastednote0_.created_timestamp desc limit 10000, 10;
+#2021-01-03 03:52:18 PM | took 1ms | statement | connection 6| url jdbc:mysql://localhost:3306/pastebin
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId=?
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId='akhilvemula95@gmail.com';
+#2021-01-03 03:52:42 PM | took 2ms | statement | connection 7| url jdbc:mysql://localhost:3306/pastebin
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId=?
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId='akhilvemula95@gmail.com';
+#2021-01-03 03:52:49 PM | took 2ms | statement | connection 8| url jdbc:mysql://localhost:3306/pastebin
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId=?
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId='akhilvemula95@gmail.com';
+#2021-01-03 03:54:14 PM | took 0ms | statement | connection 9| url jdbc:mysql://localhost:3306/pastebin
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId=?
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId='akhilvemula95@gmail.com';
+#2021-01-03 03:54:20 PM | took 3ms | statement | connection 10| url jdbc:mysql://localhost:3306/pastebin
+select pastednote0_.urlAddress as urladdre1_1_, pastednote0_.accountId as accounti2_1_, pastednote0_.text as text3_1_, pastednote0_.tier as tier4_1_, pastednote0_.created_timestamp as created_5_1_ from notes pastednote0_ where pastednote0_.urlAddress=?
+select pastednote0_.urlAddress as urladdre1_1_, pastednote0_.accountId as accounti2_1_, pastednote0_.text as text3_1_, pastednote0_.tier as tier4_1_, pastednote0_.created_timestamp as created_5_1_ from notes pastednote0_ where pastednote0_.urlAddress='004SR36APN';
+#2021-01-03 03:54:23 PM | took 1ms | statement | connection 11| url jdbc:mysql://localhost:3306/pastebin
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId=?
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId='akhilvemula95@gmail.com';
+#2021-01-03 03:54:24 PM | took 1ms | statement | connection 12| url jdbc:mysql://localhost:3306/pastebin
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId=?
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId='akhilvemula95@gmail.com';
+#2021-01-03 03:54:28 PM | took 0ms | statement | connection 13| url jdbc:mysql://localhost:3306/pastebin
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId=?
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId='akhilvemula95@gmail.com';
+#2021-01-03 03:54:32 PM | took 1ms | statement | connection 14| url jdbc:mysql://localhost:3306/pastebin
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId=?
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId='akhilvemula95@gmail.com';
+#2021-01-03 03:54:38 PM | took 63ms | statement | connection 15| url jdbc:mysql://localhost:3306/pastebin
+select pastednote0_.urlAddress as urladdre1_1_, pastednote0_.accountId as accounti2_1_, pastednote0_.text as text3_1_, pastednote0_.tier as tier4_1_, pastednote0_.created_timestamp as created_5_1_ from notes pastednote0_ where pastednote0_.accountId=? order by pastednote0_.created_timestamp desc limit ?, ?
+select pastednote0_.urlAddress as urladdre1_1_, pastednote0_.accountId as accounti2_1_, pastednote0_.text as text3_1_, pastednote0_.tier as tier4_1_, pastednote0_.created_timestamp as created_5_1_ from notes pastednote0_ where pastednote0_.accountId='akhilvemula95@gmail.com' order by pastednote0_.created_timestamp desc limit 1070, 10;
+#2021-01-03 03:54:38 PM | took 32ms | statement | connection 15| url jdbc:mysql://localhost:3306/pastebin
+select count(pastednote0_.urlAddress) as col_0_0_ from notes pastednote0_ where pastednote0_.accountId=?
+select count(pastednote0_.urlAddress) as col_0_0_ from notes pastednote0_ where pastednote0_.accountId='akhilvemula95@gmail.com';
+#2021-01-03 03:54:38 PM | took 0ms | statement | connection 15| url jdbc:mysql://localhost:3306/pastebin
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId=?
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId='akhilvemula95@gmail.com';
+#2021-01-03 03:55:12 PM | took 59ms | statement | connection 16| url jdbc:mysql://localhost:3306/pastebin
+select pastednote0_.urlAddress as urladdre1_1_, pastednote0_.accountId as accounti2_1_, pastednote0_.text as text3_1_, pastednote0_.tier as tier4_1_, pastednote0_.created_timestamp as created_5_1_ from notes pastednote0_ where pastednote0_.accountId=? order by pastednote0_.created_timestamp desc limit ?, ?
+select pastednote0_.urlAddress as urladdre1_1_, pastednote0_.accountId as accounti2_1_, pastednote0_.text as text3_1_, pastednote0_.tier as tier4_1_, pastednote0_.created_timestamp as created_5_1_ from notes pastednote0_ where pastednote0_.accountId='akhilvemula95@gmail.com' order by pastednote0_.created_timestamp desc limit 1170, 10;
+#2021-01-03 03:55:12 PM | took 32ms | statement | connection 16| url jdbc:mysql://localhost:3306/pastebin
+select count(pastednote0_.urlAddress) as col_0_0_ from notes pastednote0_ where pastednote0_.accountId=?
+select count(pastednote0_.urlAddress) as col_0_0_ from notes pastednote0_ where pastednote0_.accountId='akhilvemula95@gmail.com';
+#2021-01-03 03:55:12 PM | took 0ms | statement | connection 16| url jdbc:mysql://localhost:3306/pastebin
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId=?
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId='akhilvemula95@gmail.com';
+#2021-01-03 03:56:08 PM | took 73ms | statement | connection 17| url jdbc:mysql://localhost:3306/pastebin
+select pastednote0_.urlAddress as urladdre1_1_, pastednote0_.accountId as accounti2_1_, pastednote0_.text as text3_1_, pastednote0_.tier as tier4_1_, pastednote0_.created_timestamp as created_5_1_ from notes pastednote0_ where pastednote0_.accountId=? order by pastednote0_.created_timestamp desc limit ?, ?
+select pastednote0_.urlAddress as urladdre1_1_, pastednote0_.accountId as accounti2_1_, pastednote0_.text as text3_1_, pastednote0_.tier as tier4_1_, pastednote0_.created_timestamp as created_5_1_ from notes pastednote0_ where pastednote0_.accountId='akhilvemula95@gmail.com' order by pastednote0_.created_timestamp desc limit 1180, 10;
+#2021-01-03 03:56:08 PM | took 31ms | statement | connection 17| url jdbc:mysql://localhost:3306/pastebin
+select count(pastednote0_.urlAddress) as col_0_0_ from notes pastednote0_ where pastednote0_.accountId=?
+select count(pastednote0_.urlAddress) as col_0_0_ from notes pastednote0_ where pastednote0_.accountId='akhilvemula95@gmail.com';
+#2021-01-03 03:56:08 PM | took 0ms | statement | connection 17| url jdbc:mysql://localhost:3306/pastebin
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId=?
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId='akhilvemula95@gmail.com';
+#2021-01-03 03:56:17 PM | took 63ms | statement | connection 18| url jdbc:mysql://localhost:3306/pastebin
+select pastednote0_.urlAddress as urladdre1_1_, pastednote0_.accountId as accounti2_1_, pastednote0_.text as text3_1_, pastednote0_.tier as tier4_1_, pastednote0_.created_timestamp as created_5_1_ from notes pastednote0_ where pastednote0_.accountId=? order by pastednote0_.created_timestamp desc limit ?, ?
+select pastednote0_.urlAddress as urladdre1_1_, pastednote0_.accountId as accounti2_1_, pastednote0_.text as text3_1_, pastednote0_.tier as tier4_1_, pastednote0_.created_timestamp as created_5_1_ from notes pastednote0_ where pastednote0_.accountId='akhilvemula95@gmail.com' order by pastednote0_.created_timestamp desc limit 1190, 10;
+#2021-01-03 03:56:17 PM | took 35ms | statement | connection 18| url jdbc:mysql://localhost:3306/pastebin
+select count(pastednote0_.urlAddress) as col_0_0_ from notes pastednote0_ where pastednote0_.accountId=?
+select count(pastednote0_.urlAddress) as col_0_0_ from notes pastednote0_ where pastednote0_.accountId='akhilvemula95@gmail.com';
+#2021-01-03 03:56:17 PM | took 0ms | statement | connection 18| url jdbc:mysql://localhost:3306/pastebin
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId=?
+select accountinf0_.accountId as accounti1_0_, accountinf0_.tier as tier2_0_ from accounts accountinf0_ where accountinf0_.accountId='akhilvemula95@gmail.com';

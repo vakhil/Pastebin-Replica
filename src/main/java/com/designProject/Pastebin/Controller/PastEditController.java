@@ -8,10 +8,14 @@ import com.designProject.Pastebin.models.PastedNotes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.core.SpringVersion;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
@@ -44,15 +48,33 @@ public class PastEditController {
         // it would be easy to impleemtn this 10 minutes of logic. .. but if you have more than 1 machine, where would the
         // in memory cache be initalized ... do you have anohter computer for cache , where all machines talk to that machine
         // and get the cache value ... distributed caches and maybe understand !!
-
-
-
-        List<PastedNotes> pasteNotes = pastebinRepository.findByAccountIdOrderByTimestampDesc(emailId);
-        AccountInfo accountInfo = accountInfoRepository.findByAccountId(emailId);
-        model.addAttribute("tier",accountInfo.getTier());
-        model.addAttribute("pasteNotes",pasteNotes);
-        httpSession.setAttribute("tier",accountInfo.getTier());
+        getPaginatedEntries(httpSession,principal,model,1);
         return "editHistory";
     }
+
+    @GetMapping(value = "/editHistory/{pageNo}")
+    public String getPaginatedEntries(HttpSession httpSession,
+                                      Principal principal, Model model,@PathVariable(value = "pageNo") int pageNo){
+        int pageSize = 10;
+
+        LinkedHashMap<Object,Object> map = (LinkedHashMap<Object, Object>)
+                ((OAuth2Authentication) principal).getUserAuthentication().getDetails();
+        String emailId = (String) map.get("email");
+
+
+        Pageable pageable =  PageRequest.of(pageNo-1,pageSize);
+        Page<PastedNotes> pasteNotes = pastebinRepository.findByAccountIdOrderByTimestampDesc(emailId,pageable);
+        AccountInfo accountInfo = accountInfoRepository.findByAccountId(emailId);
+        model.addAttribute("tier",accountInfo.getTier());
+        model.addAttribute("pasteNotes",pasteNotes.getContent());
+        model.addAttribute("numberOfPages",pasteNotes.getTotalPages());
+        model.addAttribute("numberOfEntries",pasteNotes.getTotalElements());
+        model.addAttribute("currentPageNumber",pageNo);
+        httpSession.setAttribute("tier",accountInfo.getTier());
+        return "editHistory";
+
+
+    }
+
 
 }
