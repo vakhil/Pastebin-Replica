@@ -1,10 +1,13 @@
 package com.designProject.Pastebin.models;
 
+import lombok.Data;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
+@Data
 @Table(name = "accounts")
 public class AccountInfo {
 
@@ -14,20 +17,4 @@ public class AccountInfo {
     @Id
     private String accountId;
     private String tier;
-
-    public String getAccountId() {
-        return accountId;
-    }
-
-    public void setAccountId(String accountId) {
-        this.accountId = accountId;
-    }
-
-    public String getTier() {
-        return tier;
-    }
-
-    public void setTier(String tier) {
-        this.tier = tier;
-    }
 }
